@@ -14,7 +14,7 @@ From [Wikipedia](https://it.wikipedia.org/wiki/AlterVista):
 >  Use of the space is free but some additional services are subject to charges.
 >  Altervista was bought by Mondadori spa in 2016 and today it hosts about 3 million sites.
 
-Altervista permit you to manage your website via a comfortable web panel after logging in.
+Altervista allows you to manage your website via a comfortable web panel after logging in.
 
 Altervista also has a [forum](http://forum.it.altervista.org/) where people can ask for programming questions and participate in community life:
 ![The Altervista forum](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/Real/Altervista.org/img1.png)
