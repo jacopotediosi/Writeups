@@ -44,11 +44,11 @@ It redirects you as follow: ![We can steal access token](https://raw.githubuserc
 So if instead of google.it we put our malicious server address here, we can steal the access token.<br>
 And then login with it: `http://forum.it.altervista.org/login.php?do=login-aHR0cDovL2ZvcnVtLml0LmFsdGVydmlzdGEub3JnL2ZvcnVtLnBocA%3D%3D&authorization_code=XXXXXXXXXXXXXXXXXXX`
 
-![enter image description here](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/Real/Altervista.org/img3.png)
+![Logged in with other person profile](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/Real/Altervista.org/img3.png)
 
 ## Epilogue
 I immediately reported my discovery to Altervista through [the appropriate form](https://it.altervista.org/feedback.php?who=feedback), and they fixed it almost immediately.<br>
-As a reward, they added my name to the [thanks list](https://it.altervista.org/ringraziamenti.php): ![enter image description here](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/Real/Altervista.org/img4.png)
+As a reward, they added my name to the [thanks list](https://it.altervista.org/ringraziamenti.php): ![Thanks list screenshot](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/Real/Altervista.org/img4.png)
 
 ## Timeline
 - 02 January 2018: Started looking for vulnerabilities on Altervista.org
