@@ -20,6 +20,7 @@ First of all, I launched a [checksec](https://github.com/slimm609/checksec.sh) t
 
 ## Disassembling
 Then I loaded the binary into IDA Pro:
+
 ![Screenshot of the binary decompiled with IDA Pro](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/CSAW-Quals-2019/Baby_Boi/Screenshots/1.jpg)
 
 As we can see at line 10, there is an input using the gets function, which is notoriously vulnerable because it doesn't check the size of the input.
