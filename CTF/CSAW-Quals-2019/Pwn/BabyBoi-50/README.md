@@ -21,7 +21,7 @@ First of all, I launched a [checksec](https://github.com/slimm609/checksec.sh) t
 ## Disassembling
 Then I loaded the binary into IDA Pro:
 
-![Screenshot of the binary decompiled with IDA Pro](https://raw.githubusercontent.com/jacopotediosi/Writeups/master/CSAW-Quals-2019/Baby_Boi/Screenshots/1.jpg)
+![Screenshot of the binary decompiled with IDA Pro](Screenshots/1.jpg)
 
 As we can see at line 10, there is an input using the gets function, which is notoriously vulnerable because it doesn't check the size of the input.
 
@@ -53,7 +53,7 @@ We can use it to calculate the effective runtime address of the beginning of the
 Adding one of the one_gadget offsets to the beginning of the libc address that that we have just obtained, we got the address to which we weant to jump to. Voilà!
 
 ## Finally
-Putting it all together (you can see the final exploit in the [exploit.py](https://github.com/jacopotediosi/Writeups/blob/master/CSAW-Quals-2019/Baby_Boi/exploit.py) file) we finally got our shell and cat the flag.
+Putting it all together (you can see the final exploit in the [exploit.py](exploit.py) file) we finally got our shell and cat the flag.
 I had to try the third one_gadget offset, because the others weren't working because of the value of the other registers :P
 
     $ python2 exploit.py [+] Opening connection to pwn.chal.csaw.io on port 1005:
