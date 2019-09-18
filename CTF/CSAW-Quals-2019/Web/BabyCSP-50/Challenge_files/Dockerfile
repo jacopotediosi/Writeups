@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN apt update && apt install -y firefox python python-pip
+RUN apt update && apt install -y curl firefox python python-pip
 
 COPY requirements.txt .
 COPY geckodriver /usr/local/bin
