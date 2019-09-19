@@ -3,7 +3,7 @@ import requests
 import traceback
 
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 
 BOT_USER_PASSWORD = os.environ.get("BOT_USER_PASSWORD", "supersecret_bot_user_Password")
 
@@ -22,9 +22,13 @@ def botuser(post_id, base_url="http://127.0.0.1:5000"):
         cookie = r.cookies.get_dict()
 
         options = Options()
-        options.headless = True
+        options.add_argument("--disable-gpu")
+        options.add_argument("--headless")
+        options.add_argument("--disable-web-security")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
 
-        driver = webdriver.Firefox(options=options)
+        driver = webdriver.Chrome(chrome_options=options)
         driver.get(base_url)
         driver.add_cookie({"name": "session", "value": cookie["session"]})
         driver.add_cookie({"name": "flag", "value": FLAG})
