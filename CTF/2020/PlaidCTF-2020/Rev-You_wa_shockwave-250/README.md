@@ -2,11 +2,11 @@
 
 ## Introduction
 We are provided with an archive (you_wa_shockwave.gz) containing the following files:
-![Challenge files](img\1.jpg)
+![Challenge files](img/1.jpg)
 
 Trying to open Projector.exe and inserting some random characters into input:
 
-![Running Projector.exe](img\2.jpg)
+![Running Projector.exe](img/2.jpg)
 
 After some digging we discovered that the app was made with Adobe Director 10 and that the most important file was the one with .dcr extension, which contains some kind of bytecode/memory dump.
 
@@ -90,6 +90,6 @@ Basically, it was enough to translate functions from Lingo Code to Python and te
 
 After a few minutes of computation:
 
-![Solver running](img\3.jpg)
+![Solver running](img/3.jpg)
 
 PCTF{Gr4ph1CS_D3SiGn_Is_tRUlY_My_Pas5ioN!}
