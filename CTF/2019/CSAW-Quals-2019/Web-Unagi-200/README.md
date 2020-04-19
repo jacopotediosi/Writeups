@@ -3,7 +3,7 @@
 ## What we have
 The chall provide us with a link to a very basic website of 4 pages:
 
-![Screenshot of the challenge website](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/Unagi-200/Screenshots/1.jpg?raw=true)
+![Screenshot of the challenge website](Screenshots/1.jpg)
 
 So we know the flag is located at `/flag.txt`.
 In the upload page we can download this XML file:
@@ -28,7 +28,7 @@ In the upload page we can download this XML file:
 
 And uploading it, we get this result:
 
-![Screenshot after the sample.xml upload](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/Unagi-200/Screenshots/2.jpg?raw=true)
+![Screenshot after the sample.xml upload](Screenshots/2.jpg)
 
 ## About the vulnerability
 This seems to be the classic situation in which it is possible to exploit an XML External Entity ([XXE](https://www.owasp.org/index.php/XML_External_Entity_%28XXE%29_Processing)) vulnerability.
@@ -51,7 +51,7 @@ In these cases the first thing I usually try is the following payload to read a 
 
 But there's a Web Application Firewall (WAF) that is blocking our file:
 
-![Screenshot of the WAF blocking our exploit](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/Unagi-200/Screenshots/3.jpg?raw=true)
+![Screenshot of the WAF blocking our exploit](Screenshots/3.jpg)
 
 ## The WAF
 Trying to remove or change some things, I realized that the WAF checks that the content of the file does not correspond to a blacklist of words.
@@ -80,7 +80,7 @@ I just tried to save the original payload (after adding `encoding='utf-16'` to t
 
 Uploading it, we can finally read `/etc/passwd`... Or not?
 
-![Output is truncated, screenshot](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/Unagi-200/Screenshots/4.jpg?raw=true)
+![Output is truncated, screenshot](Screenshots/4.jpg)
 
 Argh, our output is truncated!
 
@@ -110,7 +110,7 @@ Maybe it isn't truncated? Let's check, this time trying to obtain the flag file.
 		</user>
 	</users>
 
-![Got the flag](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/Unagi-200/Screenshots/5.jpg?raw=true)
+![Got the flag](Screenshots/5.jpg)
 
 Bingo!
 
