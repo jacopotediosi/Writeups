@@ -3,7 +3,7 @@
 ## What we have
 The chall provide us with a link to a very basic website:
 
-![Screenshot of the challenge website](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/BabyCSP-50/Screenshots/1.jpg?raw=true)
+![Screenshot of the challenge website](Screenshots/1.jpg)
 
 We can create posts, view them and report them to an admin. Nice!
 
@@ -16,7 +16,7 @@ Maybe we can do an XSS and steal the bot/admin cookies? But first, we need to di
 ## CSP Bypass
 First of all, I tried to analyze the chall CSP rules with the [Google CSP Evaluator Tool](https://csp-evaluator.withgoogle.com/):
 
-![The Google CSP Evaluetor Tool Analysis](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/BabyCSP-50/Screenshots/2.jpg?raw=true)
+![The Google CSP Evaluetor Tool Analysis](Screenshots/2.jpg)
 
 Seems good: we can use a JSONP endpoint to bypass CSP.
 
@@ -32,7 +32,7 @@ I wrote, just to try, the following post:
 
 Someone here forgot to sanitize inputs :P
 
-![XSS executed!](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/BabyCSP-50/Screenshots/3.jpg?raw=true)
+![XSS executed!](Screenshots/3.jpg)
 
 I then prepared a [RequestBin](https://requestbin.com) to receive admin cookies, I created a post with the following payload (everything after "callback=" is urlencoded, just to be sure):
 
@@ -41,4 +41,4 @@ I then prepared a [RequestBin](https://requestbin.com) to receive admin cookies,
 And I reported it to the admin.
 
 Fewer minutes later, I received this request directly containing the flag:
-![Screenshot of the request received, containing the flag](https://github.com/jacopotediosi/Writeups/blob/master/CTF/CSAW-Quals-2019/Web/BabyCSP-50/Screenshots/4.jpg?raw=true)
+![Screenshot of the request received, containing the flag](Screenshots/4.jpg)
