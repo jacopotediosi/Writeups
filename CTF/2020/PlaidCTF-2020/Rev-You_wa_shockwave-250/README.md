@@ -1,7 +1,7 @@
 # YOU wa SHOCKWAVE - Rev 250pts
 
 ## Introduction
-We are provided with an archive (you_wa_shockwave.gz) containing the following files:
+We were provided with an archive (you_wa_shockwave.gz) containing the following files:
 ![Challenge files](img/1.jpg)
 
 Trying to open Projector.exe and inserting some random characters into input:
@@ -82,7 +82,7 @@ Uh! So:
 
 ## Coding time
 
-My teammates wrote a solver script in python (included file "solver.py"), introducing me to a module called z3. I had never heard of, but now I'm loving it. Given what he managed to do in this challenge, it seems to me a very powerful tool.
+My teammates (thanks @kzalloc and @gaspare) wrote a solver script in python (included file "solver.py"), introducing me to a module called z3. I had never heard of, but now I'm loving it. Given what he managed to do in this challenge, it seems to me a very powerful tool.
 
 Basically, it was enough to translate functions from Lingo Code to Python and tell z3 some conditions (like that the flag characters must be included in the ASCII printable range and that the flag must pass the custom checksum function).
 
