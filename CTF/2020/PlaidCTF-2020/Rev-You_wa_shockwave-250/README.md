@@ -1,6 +1,8 @@
 # YOU wa SHOCKWAVE - Rev 250pts
 
 ## Introduction
+I played this crazy CTF in the team CarbonaraConPanna, a merge of SaltedCrhackers (team of the University of Milan), ROPperoni (people from "La Sapienza", University of Rome), PGiatasti, ZenHack and those bad guys of PwnTheM0le (Polytechnic of Turin)
+
 We were provided with an archive (you_wa_shockwave.gz) containing the following files:
 ![Challenge files](img/1.jpg)
 
@@ -82,7 +84,7 @@ Uh! So:
 
 ## Coding time
 
-My teammates (thanks @kzalloc and @gaspare) wrote a solver script in python (included file "solver.py"), introducing me to a module called z3. I had never heard of, but now I'm loving it. Given what he managed to do in this challenge, it seems to me a very powerful tool.
+My teammates (thanks @kzalloc and [@gaspareG](https://gaspa.re/)) wrote a solver script in python (included file "solver.py"), introducing me to a module called z3. I had never heard of, but now I'm loving it. Given what he managed to do in this challenge, it seems to me a very powerful tool.
 
 Basically, it was enough to translate functions from Lingo Code to Python and tell z3 some conditions (like that the flag characters must be included in the ASCII printable range and that the flag must pass the custom checksum function).
 
