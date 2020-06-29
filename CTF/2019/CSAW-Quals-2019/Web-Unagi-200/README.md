@@ -115,4 +115,10 @@ Maybe it isn't truncated? Let's check, this time trying to obtain the flag file.
 Bingo!
 
 ## Solution 2 - Out Of Band (OOB)
-Coming soon; I'm writing it!
+A classic Out of Band XXE didn't work here, because flag.txt contained newline characters and broke HTTP requests to my server.
+
+To make it work, I first had to encode the contents of flag.txt file using the PHP Wrapper php://filter/read=convert.base64-encode/resource=file:///flag.txt.
+
+Then, looking at my server logs, I saw I received the encode flag and I decoded it.
+
+You can see my final exploit files into the "Solution2-OOB" folder. Unagi.xml was the file I uploaded to the challenge, while evil.dtd was the file on my server.
